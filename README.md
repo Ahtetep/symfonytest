@@ -12,7 +12,7 @@ GuestBook
 - symfony composer req admin                    Админ панель
 - symfony composer req twig                     Установка Twig
 - symfony composer require twig/intl-extra      Установка фильтра format_datetime
-- 
+- symfony composer req string                   Symfony компонента String
 
 Инициализация проекта:
 
@@ -27,7 +27,8 @@ symfony composer req annotations &&
 symfony composer req orm &&
 symfony composer req admin 2.3.4 &&
 symfony composer req twig &&
-symfony composer require twig/intl-extra
+symfony composer require twig/intl-extra &&
+symfony composer req string &&
 
 
 ### Описание некоторых команд ###
@@ -71,7 +72,9 @@ symfony composer require twig/intl-extra
     
 * Создать и выполнить миграцию
     * ***symfony console make:migration***      
-    * ***symfony console doctrine:migrations:migrate***      
+    * ***symfony console doctrine:migrations:migrate***   
+    
+    symfony console make:migration && symfony console doctrine:migrations:migrate   
 
 * Ошибка EasyAdmin 
     *  Если не работает - проверить версию. С версией 2.3.4 работает      
