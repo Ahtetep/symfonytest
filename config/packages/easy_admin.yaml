@@ -1,0 +1,32 @@
+#TODO Настройка админ панели
+#TODO При ошибке "Нет роута /admin провкрить версию пакета"
+
+easy_admin:
+    site_name: Symfony Test
+
+    design:
+        menu:
+            - { route: 'homepage', label: 'Back to the website', icon: 'home' }
+            - { entity: 'Conference', label: 'Conference', icon: 'map-marker' }
+            - { entity: 'Comment', label: 'Comment', icon: 'comments' }
+
+    entities:
+        Conference:
+            class: App\Entity\Conference
+
+        Comment:
+            class: App\Entity\Comment
+            list:
+                fields:
+                    - author
+                    - { property: 'email', type: 'email' }
+                    - { property: 'createdAt', type: 'datetime' }
+                sort: [ 'createdAt', 'ASC' ]
+                filter: [ 'conference' ]
+            edit:
+                fields:
+                    - { property: 'conference' }
+                    - { property: 'createdAt', type: datetime, type_options: { attr: { readonly: true } } }
+                    - 'author'
+                    - { property: 'email', tupy: 'email' }
+                    - text
