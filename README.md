@@ -81,6 +81,9 @@ symfony composer req string &&
     
 * Генерация подписчика
     * ***symfony console make:subscriber TwigEventSubscriber***    
+    
+* Генерация формы
+    * ***symfony console make:form CommentFormType Comment***    
 
 
 -------------------------------------------------------------------------
