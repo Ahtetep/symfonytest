@@ -12,6 +12,7 @@ GuestBook
 - symfony composer req admin                    Админ панель
 - symfony composer req twig                     Установка Twig
 - symfony composer require twig/intl-extra      Установка фильтра format_datetime
+- 
 
 Инициализация проекта:
 
@@ -74,6 +75,9 @@ symfony composer require twig/intl-extra
 
 * Ошибка EasyAdmin 
     *  Если не работает - проверить версию. С версией 2.3.4 работает      
+    
+* Генерация подписчика
+    * ***symfony console make:subscriber TwigEventSubscriber***    
 
 
 -------------------------------------------------------------------------
