@@ -3,15 +3,17 @@ GuestBook
 
 ### Нужные пакеты ###
 
-- symfony composer req profiler --dev                 Отладка
+- symfony composer req profiler --dev           Отладка
 - symfony composer req logger
 - symfony composer req debug --dev
-- symfony composer req maker --dev                    Генерация контроллеров
-- symfony composer req annotations                    Аннотации
-- symfony composer req orm                            ORM
-- symfony composer req admin
+- symfony composer req maker --dev              Генерация контроллеров
+- symfony composer req annotations              Аннотации
+- symfony composer req orm                      ORM
+- symfony composer req admin                    Админ панель
+- symfony composer req twig                     Установка Twig
+- symfony composer require twig/intl-extra      Установка фильтра format_datetime
 
-Инициализация проекиа:
+Инициализация проекта:
 
 symfony new symftest --version=5.0 &&
 cd symftest &&
@@ -22,7 +24,9 @@ symfony composer req debug --dev &&
 symfony composer req maker --dev &&
 symfony composer req annotations &&
 symfony composer req orm &&
-symfony composer req admin 2.3.4
+symfony composer req admin 2.3.4 &&
+symfony composer req twig &&
+symfony composer require twig/intl-extra
 
 
 ### Описание некоторых команд ###
